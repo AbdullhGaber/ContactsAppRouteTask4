@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/name_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/extra_large_padding"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginTop="@dimen/medium_padding"
+        android:layout_marginEnd="@dimen/default_padding"
+        android:paddingHorizontal="@dimen/default_padding"
+        android:background="@drawable/input_field_box"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="@dimen/default_padding"
+        android:hint="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/phone_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/extra_large_padding"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginTop="@dimen/medium_padding"
+        android:layout_marginEnd="@dimen/default_padding"
+        android:paddingHorizontal="@dimen/default_padding"
+        android:background="@drawable/input_field_box"
+        android:drawableStart="@drawable/baseline_phone_24"
+        android:drawablePadding="8dp"
+        android:hint="@string/phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_et" />
+
+    <TextView
+        android:id="@+id/counter_phone_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/medium_padding"
+        android:text="0/11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_et" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/description_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/extra_large_padding"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/default_padding"
+        android:background="@drawable/input_field_box"
+        android:hint="@string/description"
+        android:paddingHorizontal="@dimen/default_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/counter_phone_tv" />
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/extra_large_padding_2"
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/extra_large_padding_2"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_et" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contacts_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/medium_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_btn"
+        tools:listitem="@layout/contact_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

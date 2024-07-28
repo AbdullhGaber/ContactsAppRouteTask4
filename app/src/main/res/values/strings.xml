@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ContactsApp</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+
+    <string name = "name_empty_error_msg">Name field shouldn\'t be empty\n</string>
+    <string name = "name_min_3_chars_error_msg">Name field should at least have minimum 3 characters\n</string>
+
+    <string name = "phone_empty_error_msg">Phone number field shouldn\'t be empty\n</string>
+    <string name = "phone_11_chars_error_msg">Phone number field should be 11 numbers\n</string>
+</resources>
